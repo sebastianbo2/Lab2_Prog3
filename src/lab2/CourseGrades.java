@@ -29,12 +29,28 @@ public class CourseGrades implements Analyzable{
     
     @Override
     public GradedActivity getHighest() {
+        GradedActivity best = grades[0];
         
+        for (int i = 0; i < grades.length; i++) {
+            if (best.getScore() < grades[i].getScore()) {
+                best = grades[i];
+            }
+        }
+        
+        return best;
     }
     
     @Override
     public GradedActivity getLowest() {
+        GradedActivity best = grades[0];
         
+        for (int i = 0; i < grades.length; i++) {
+            if (best.getScore() > grades[i].getScore()) {
+                best = grades[i];
+            }
+        }
+        
+        return best;
     }
     
     public void setLab(GradedActivity lab) {
