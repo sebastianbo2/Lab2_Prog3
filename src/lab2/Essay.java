@@ -15,7 +15,8 @@ public class Essay extends GradedActivity{
     private double content;
     
     public void setScore(double grammer, double spelling, double correctLength, double content) {
-        setScore(grammer + spelling + correctLength + content);
+        super.setScore(grammer + spelling + correctLength + content);
+        System.out.println("HELLO: " + grammer + ", " + spelling + ", " + correctLength + ", " + content);
     }
     
     public double getGrammer() {
@@ -48,5 +49,11 @@ public class Essay extends GradedActivity{
 
     public void setContent(double content) {
         this.content = content;
+    }
+    
+    @Override
+    public String toString() {
+        return "Total points: " + getScore() + "\n"
+                + "Grade: " + getGrade();
     }
 }

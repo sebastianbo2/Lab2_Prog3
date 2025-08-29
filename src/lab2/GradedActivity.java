@@ -31,5 +31,5 @@ public class GradedActivity {
         } else {
             return 'F';
         }
-    }
+    }    
 }
