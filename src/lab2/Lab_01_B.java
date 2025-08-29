@@ -43,7 +43,7 @@ public class Lab_01_B {
         System.out.print("Content points: ");
         double content = input.nextDouble();
         Essay e1 = new Essay();
-        e1.setScore(length, length, length, content);
+        e1.setScore(grammar, spelling, length, content);
         System.out.println(e1.toString());
         
         System.out.println("\nStep 5:");
@@ -51,12 +51,12 @@ public class Lab_01_B {
         GradedActivity gA = new GradedActivity();
         gA.setScore(85);
         cG.setLab(gA);
-        PassFailExam pFE = new PassFailExam(10,1,70);
+        PassFailExam pFE = new PassFailExam(20,3,70);
         cG.setPassFailExam(pFE);
         Essay e2 = new Essay();
-        e2.setScore(10,20,20,20);
+        e2.setScore(20,15,20,25);
         cG.setEssay(e2);
-        FinalExam fE = new FinalExam(50,1);
+        FinalExam fE = new FinalExam(50, 10);
         cG.setFinalExam(fE);
         System.out.println(cG);
         

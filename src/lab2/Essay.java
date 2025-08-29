@@ -16,7 +16,6 @@ public class Essay extends GradedActivity{
     
     public void setScore(double grammer, double spelling, double correctLength, double content) {
         super.setScore(grammer + spelling + correctLength + content);
-        System.out.println("HELLO: " + grammer + ", " + spelling + ", " + correctLength + ", " + content);
     }
     
     public double getGrammer() {
